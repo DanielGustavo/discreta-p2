@@ -1,0 +1,144 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --dark-color: #070807;
+  --light-color: #f1e9e9;
+  --primary-color: #1caa1c;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+   
+  background: var(--dark-color);
+  color: var(--light-color);
+
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.equation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+   
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.equationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.incognitContainer {
+  display: flex;
+  gap: 8px;
+
+  input {
+    width: 100%;
+    height: 60px;
+     
+    border-radius: 10px;
+    border: none;
+     
+    color: var(--dark-color);
+    font-size: 50px;
+    transition: 100ms;
+  }
+
+  .small {
+    font-size: 20px;
+  }
+}
+
+.inputWrapper {
+  min-width: 46px;
+   
+  position: relative;
+
+  .widthMachine {
+    opacity: 0;
+    padding: 0 4px;  
+     
+    max-width: calc(100vw / 6);
+    overflow: hidden;
+    display: block;
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+h1 {
+  color: var(--light-color);
+  text-transform: capitalize;
+  font-size: 50px;
+}
+
+button {
+  cursor: pointer;
+   
+  border: none;
+  border-radius: 10px;
+
+  color: var(--light-color);
+  background: var(--primary-color);
+   
+  padding: 12px;
+  font-size: 30px;
+  font-weight: 400;
+   
+  aspect-ratio: 1;
+  transition: 100ms;
+}
+
+button:hover, input:hover {
+  transform: scale(1.02);
+}
+
+button:active, input:active {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 1080px) {
+  .widthMachine {
+    max-width: calc(100vw / 8) !important;
+  }
+}
+ 
+@media only screen and (max-width: 830px) {
+  .widthMachine {
+    max-width: calc(100vw / 12) !important;
+  }
+}
+
+/* REMOVE NUMBER INPUT ARROWS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

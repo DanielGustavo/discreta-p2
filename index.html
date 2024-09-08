@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discreta P2</title>
+  </head>
+  <body>
+    <h1>Calculadora de recorrência</h1>
+       
+    <div id="app">
+      <div class="equationContainer">
+        <div class="equation">
+          <div class="incognitContainer">
+            <span class="inputWrapper">
+              <span class="widthMachine" aria-hidden="true"></span>
+              <input type="number"/>
+            </span>
+             
+            <div class="incognit">X<span class="small">n+2</span></div>
+          </div>
+
+          <span>+</span>
+
+          <div class="incognitContainer">
+            <span class="inputWrapper">
+              <span class="widthMachine" aria-hidden="true"></span>
+              <input type="number"/>
+            </span>
+             
+            <div class="incognit">X<span class="small">n+1</span></div>
+          </div>
+
+          <span>+</span>
+           
+          <div class="incognitContainer">
+            <span class="inputWrapper">
+              <span class="widthMachine" aria-hidden="true"></span>
+              <input type="number"/>
+            </span>
+             
+            <div class="incognit">X<span class="small">n</span></div>
+          </div>
+           
+          <span>=</span>
+           
+          <span>0</span>
+        </div>
+
+        <button>=</button>
+      </div>
+    </div>
+     
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
