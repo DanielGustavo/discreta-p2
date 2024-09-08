@@ -40,10 +40,10 @@ body {
 .equationContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
 
-  gap: 16px;
+  gap: 40px;
 }
 
 .incognitContainer {
@@ -104,11 +104,10 @@ button {
   color: var(--light-color);
   background: var(--primary-color);
    
-  padding: 12px;
+  padding: 8px 16px;
   font-size: 30px;
   font-weight: 400;
    
-  aspect-ratio: 1;
   transition: 100ms;
 }
 
