@@ -4,28 +4,44 @@
   --dark-color: #070807;
   --light-color: #f1e9e9;
   --primary-color: #1caa1c;
+  --red-color: #c52323;
+  --gray-color: #2B2B2B;
+  --blue-color: #494eff;
+}
+
+.colorGreen {
+  color: var(--primary-color) !important;
+}
+ 
+.colorBlue {
+  color: var(--blue-color) !important;
+}
+ 
+.colorRed {
+  color: var(--red-color) !important;
 }
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 32px;
+  box-sizing: border-box;
    
-  background: var(--dark-color);
-  color: var(--light-color);
-
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-}
-
-#app {
   display: flex;
   flex-direction: column;
   align-items: center;
    
-  margin: auto;
-  transform: translateY(-50%);
+  background: var(--dark-color);
+  color: var(--light-color);
+   
+  width: 100vw;
+  height: 100vh;
+}
+
+.vCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
 .equation {
@@ -37,13 +53,39 @@ body {
   font-weight: 400;
 }
 
-.equationContainer {
+#equationsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 
-  gap: 40px;
+  gap: 32px;
+}
+
+.incognit {
+  display: flex;
+
+  .small {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .expoent {
+    align-self: flex-start;
+  }
+}
+
+.equationResponse {
+  background: var(--gray-color);
+  padding: 32px 48px;
+  border-radius: 8px;
+}
+ 
+.equationDelta {
+  background: var(--gray-color);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 32px;
 }
 
 .incognitContainer {
@@ -60,6 +102,11 @@ body {
     color: var(--dark-color);
     font-size: 50px;
     transition: 100ms;
+  }
+
+  input:disabled {
+    color: var(--white-color);
+    background: var(--gray-color);
   }
 
   .small {
@@ -93,6 +140,7 @@ h1 {
   color: var(--light-color);
   text-transform: capitalize;
   font-size: 50px;
+  margin: 0;
 }
 
 button {
@@ -111,12 +159,16 @@ button {
   transition: 100ms;
 }
 
-button:hover, input:hover {
+button:hover, input:not(:disabled):hover {
   transform: scale(1.02);
 }
 
-button:active, input:active {
+button:active, input:not(:disabled):active {
   transform: scale(1);
+}
+
+.bgRed {
+  background: var(--red-color);
 }
 
 @media only screen and (max-width: 1080px) {

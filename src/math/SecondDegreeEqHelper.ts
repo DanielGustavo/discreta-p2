@@ -1,3 +1,5 @@
+import { TNegativeDeltaResponse, TPositiveDeltaResponse } from "./TSecondDegreeEqHelper";
+
 class SecondDegreeEqHelper {
   private calcDelta(a: number, b: number, c: number) {
     return b ** 2 - 4 * a * c;
@@ -22,7 +24,7 @@ class SecondDegreeEqHelper {
 
     if (delta >= 0) {
       const lambdas = this.calcBaskhara(a, b, delta);
-      return { lambdas, a, b, c, delta };
+      return { lambdas, a, b, c, delta } as TPositiveDeltaResponse;
     }
 
     const opositeCatet = Math.sqrt(Math.abs(delta)) / 2;
@@ -32,7 +34,7 @@ class SecondDegreeEqHelper {
     const angleRadians = Math.atan2(opositeCatet, adjascentCatet);
     const angleDegree = angleRadians * (180 / Math.PI);
 
-    return { p, angle: angleDegree, a, b, c, delta };
+    return { p, angle: angleDegree, a, b, c, delta } as TNegativeDeltaResponse;
   }
 }
 

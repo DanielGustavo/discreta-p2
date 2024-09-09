@@ -8,49 +8,48 @@
   </head>
   <body>
     <h1>Calculadora de recorrência</h1>
-       
-    <div id="app">
-      <div class="equationContainer">
-        <div class="equation">
-          <div class="incognitContainer">
-            <span class="inputWrapper">
-              <span class="widthMachine" aria-hidden="true"></span>
-              <input type="number"/>
-            </span>
-             
-            <div class="incognit">X<span class="small">n+2</span></div>
-          </div>
-
-          <span>+</span>
-
-          <div class="incognitContainer">
-            <span class="inputWrapper">
-              <span class="widthMachine" aria-hidden="true"></span>
-              <input type="number"/>
-            </span>
-             
-            <div class="incognit">X<span class="small">n+1</span></div>
-          </div>
-
-          <span>+</span>
+   
+    <form class="vCenter" id="equationsContainer">
+      <div class="equation equationInput">
+        <div class="incognitContainer">
+          <span class="inputWrapper">
+            <span class="widthMachine" aria-hidden="true"></span>
+            <input type="number" name="a"/>
+          </span>
            
-          <div class="incognitContainer">
-            <span class="inputWrapper">
-              <span class="widthMachine" aria-hidden="true"></span>
-              <input type="number"/>
-            </span>
-             
-            <div class="incognit">X<span class="small">n</span></div>
-          </div>
-           
-          <span>=</span>
-           
-          <span>0</span>
+          <div class="incognit">X<span class="small">n+2</span></div>
         </div>
 
-        <button>Calcular</button>
+        <span>+</span>
+
+        <div class="incognitContainer">
+          <span class="inputWrapper">
+            <span class="widthMachine" aria-hidden="true"></span>
+            <input type="number" name="b"/>
+          </span>
+           
+          <div class="incognit">X<span class="small">n+1</span></div>
+        </div>
+
+        <span>+</span>
+         
+        <div class="incognitContainer">
+          <span class="inputWrapper">
+            <span class="widthMachine" aria-hidden="true"></span>
+            <input type="number" name="c"/>
+          </span>
+           
+          <div class="incognit">X<span class="small">n</span></div>
+        </div>
+         
+        <span>=</span>
+         
+        <span>0</span>
       </div>
-    </div>
+       
+      <button type="submit" id="ctaButton">Calcular</button>
+    </form>
+     
      
     <script type="module" src="/src/main.ts"></script>
   </body>
