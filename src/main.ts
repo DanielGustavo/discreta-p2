@@ -195,8 +195,8 @@ function addNegativeDeltaResponse(response: TNegativeDeltaResponse) {
 
       <div class="incognitContainer">
         <div class="incognit">(
-          K<span class="small">1</span>cos(n${response.angle.toFixed(2)}) + 
-          K<span class="small">2</span>sen(n${response.angle.toFixed(2)}))
+          K<span class="small">1</span>cos(n*${response.angle.toFixed(2)}) + 
+          K<span class="small">2</span>sen(n*${response.angle.toFixed(2)}))
         </div>
       </div>
     </div>

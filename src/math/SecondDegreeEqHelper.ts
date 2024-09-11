@@ -31,7 +31,7 @@ class SecondDegreeEqHelper {
     const adjascentCatet = (-1 * b) / 2;
 
     const p = Math.sqrt(opositeCatet ** 2 + adjascentCatet ** 2);
-    const angleRadians = Math.atan2(opositeCatet, adjascentCatet);
+    const angleRadians = Math.atan(opositeCatet / adjascentCatet);
     const angleDegree = angleRadians * (180 / Math.PI);
 
     return { p, angle: angleDegree, a, b, c, delta } as TNegativeDeltaResponse;
