@@ -17,9 +17,9 @@ class SecondDegreeEqHelper {
       throw new Error("Não existe solução geral");
     }
 
-    a = a / a;
     b = b / a;
     c = c / a;
+    a = a / a;
     const delta = this.calcDelta(a, b, c);
 
     if (delta >= 0) {
